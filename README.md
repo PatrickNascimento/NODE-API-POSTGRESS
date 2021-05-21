@@ -11,14 +11,14 @@ psql postgres
 ```
 
 ```sql
-CREATE ROLE me WITH LOGIN PASSWORD 'password';
-ALTER ROLE me CREATEDB;
-CREATE DATABASE api;
-GRANT ALL PRIVILEGES ON DATABASE api TO me;
+CREATE ROLE postgres WITH LOGIN PASSWORD 'password';
+ALTER ROLE postgres CREATEDB;
+CREATE DATABASE banco;
+GRANT ALL PRIVILEGES ON DATABASE banco TO postgres;
 ```
 
 ```bash
-psql -d api -U me
+psql -d banco -U me
 ```
 
 ```sql
@@ -29,7 +29,7 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (name, email)
-  VALUES ('Jerry', 'jerry@example.com'), ('George', 'george@example.com');
+  VALUES ('Patrick', 'patrick@example.com'), ('Luby', 'Luby@example.com');
 ```
 
 ## Installation
@@ -50,7 +50,7 @@ node index.js
 
 ## Author
 
-- [Patrick Nascimento](https://www.microvision.com.br/developer)
+- [Patrick Nascimento]
 
 ## License
 
